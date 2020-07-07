@@ -1,7 +1,5 @@
 .idea
 dist
 node_modules
-webpack.docx
-~$ebpack.docx
-temp.txt
+doc
 package-lock.json
