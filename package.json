@@ -32,7 +32,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "jquery": "^3.5.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "regenerator-runtime": "^0.13.5"
   }
 }
