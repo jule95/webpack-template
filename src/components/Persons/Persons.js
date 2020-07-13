@@ -8,7 +8,7 @@ const persons = props =>
         <Person
             key={person.id}
             name={person.name}
-            age={person.age}/>);
+            age={person.age}/>)
 };
 
 export default persons;
