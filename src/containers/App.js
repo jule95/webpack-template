@@ -1,6 +1,12 @@
+//React
 import React, {Component} from "react";
 
-import Persons from "../components/Persons/Persons";
+//Bootstrap
+import Navbar from "react-bootstrap/cjs/Navbar";
+import Container from "react-bootstrap/Container";
+
+/*My Component*/
+//Class Based
 import Cockpit from "../components/Cockpit/Cockpit.js"
 
 class App extends Component
@@ -10,20 +16,15 @@ class App extends Component
         super(props);
 
         this.state = {
-            persons: [
-                {id: 0, name: "Julius", age: 25},
-                {id: 1, name: "John", age: 25}
-            ]
         };
     }
 
     render()
     {
         return (
-            <React.Fragment>
-                <Cockpit title={this.props.title}/>
-                <Persons persons={this.state.persons}/>
-            </React.Fragment>
+           <React.Fragment>
+                <Cockpit title={this.props.title} bg={"light"}/>
+           </React.Fragment>
         )
     }
 }

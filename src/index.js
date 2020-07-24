@@ -1,10 +1,9 @@
-//react
+//React
 import React from "react";
 import ReactDOM from "react-dom";
-//react bootstrap
+//Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-//app component
+//App Component
 import App from "./containers/App";
 
 ReactDOM.render(<App title="I Am A React App!"/>, document.getElementById('root'));
