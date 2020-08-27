@@ -1,11 +1,7 @@
 //React
 import React, {Component} from "react";
 
-//Bootstrap
-import Navbar from "react-bootstrap/cjs/Navbar";
-import Container from "react-bootstrap/Container";
-
-/*My Component*/
+/*My Components*/
 //Class Based
 import Cockpit from "../components/Cockpit/Cockpit.js"
 
