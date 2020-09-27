@@ -5,6 +5,8 @@ const path = require('path');
 //plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { VueLoaderPlugin } = require('vue-loader')
+
 
 module.exports = {
     entry: './src/js/index.js',
@@ -16,14 +18,18 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.vue$/,
+                use: 'vue-loader',
+            },
+            {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
             },
             {
                 test:/\.css$/,
-                loader: [MiniCssExtractPlugin.loader, "css-loader"]
-            }
+                loader: [MiniCssExtractPlugin.loader, "css-loader"],
+            },
         ]
     },
     plugins: [new HtmlWebpackPlugin({
@@ -34,5 +40,5 @@ module.exports = {
         $: "jquery",
         jQuery: "jquery",
         "window.$": "jquery"
-    }), new MiniCssExtractPlugin()]
+    }), new MiniCssExtractPlugin(), new VueLoaderPlugin()]
 };
