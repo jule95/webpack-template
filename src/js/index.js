@@ -1,11 +1,7 @@
-import "../css/styles.css";
+import Vue from 'vue';
+import App from '../App.vue';
 
-const sayHello = () => {
-  console.log("hello!");
-};
-
-const getPost = async (index) => {
-  const data = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-
-  return data.json();
-};
+new Vue({
+  el: '#app',
+  render: h => h(App)
+})
