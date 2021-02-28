@@ -1,15 +1,13 @@
 <template>
-    <div class="container">
-        <h2>Hello World!</h2>
-    </div>
 </template>
 
 <script>
-    export default {
-        name: "App"
-    }
+import Vue from 'vue';
+
+export default Vue.extend({
+  name: "App"
+});
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
 </style>

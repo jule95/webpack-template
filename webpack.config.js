@@ -9,7 +9,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './src/ts/index.ts',
     output: {
         path: path.resolve(__dirname, './dist/'),
         filename: 'bundle.js'
@@ -27,15 +27,23 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
                 test:/\.css$/,
-                loader: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
         ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [new HtmlWebpackPlugin({
         title: "Webpack Test",
         filename: "index.html",
-        template: "./src/html/index.html"
+        template: "./index.html"
     }), new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
