@@ -1,4 +1,7 @@
 <template>
+  <div class="app">
+    <p>Hello World!</p>
+  </div>
 </template>
 
 <script>
@@ -9,5 +12,8 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  .app {
+    padding: 20px;
+  }
 </style>

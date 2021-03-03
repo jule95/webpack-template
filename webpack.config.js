@@ -1,5 +1,5 @@
 //webpack
-const webpack = require("webpack");
+const webpack = require('webpack');
 //other
 const path = require('path');
 //plugins
@@ -14,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist/'),
         filename: 'bundle.js'
     },
-    devtool: "eval-source-map",
+    devtool: 'eval-source-map',
     module: {
         rules: [
             {
@@ -32,8 +32,8 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test:/\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                test:/\.scss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
         ]
     },
@@ -41,12 +41,12 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [new HtmlWebpackPlugin({
-        title: "Webpack Test",
-        filename: "index.html",
-        template: "./index.html"
+        title: 'Webpack Test',
+        filename: 'index.html',
+        template: './index.html'
     }), new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.$": "jquery"
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.$': 'jquery'
     }), new MiniCssExtractPlugin(), new VueLoaderPlugin()]
 };
