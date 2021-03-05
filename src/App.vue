@@ -14,6 +14,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   .app {
-    padding: 20px;
+    // styles ...
   }
 </style>

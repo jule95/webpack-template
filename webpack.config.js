@@ -40,9 +40,6 @@ module.exports = {
             },
         ]
     },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
     plugins: [new HtmlWebpackPlugin({
         title: 'Webpack Test',
         filename: 'index.html',
